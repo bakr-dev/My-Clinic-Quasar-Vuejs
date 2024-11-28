@@ -1,0 +1,27 @@
+// app global css in SCSS form
+
+.container {
+  // width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.appointment-btn {
+  transition: all 500ms;
+  &:hover {
+    color: $primary !important;
+    background-color: white !important;
+  }
+
+  .q-focus-helper {
+    visibility: hidden;
+  }
+}
+
+.border-bottom {
+  border-bottom: 5px solid $primary;
+}
+
+.q-btn.active {
+  color: $primary !important;
+}
