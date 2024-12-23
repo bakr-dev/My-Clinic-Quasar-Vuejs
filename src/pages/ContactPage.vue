@@ -3,29 +3,9 @@
     <div class="q-pa-md container row items-center" style="height: 100%">
       <div class="col row q-pt-md items-center full-height justify-around">
         <div class="full-width" style="max-width: 600px">
-          <h5 class="text-center text-primary">Contact Us</h5>
-          <q-card>
-            <q-card-section>
-              <q-form>
-                <q-input class="q-mb-md" filled v-model="name" label="Name" />
-                <q-input class="q-mb-md" filled v-model="email" label="Email" />
-                <q-input class="q-mb-md" filled v-model="phone" label="Phone" />
-                <q-input
-                  v-model="textareaModel"
-                  filled
-                  clearable
-                  type="textarea"
-                  label="ًWrite Your Message"
-                  hint="We will respond as soon as possible"
-                />
-              </q-form>
-            </q-card-section>
-            <q-btn label="Send" class="full-width" color="primary"></q-btn>
-          </q-card>
-        </div>
-
-        <div class="full-width" style="max-width: 600px">
-          <h5 class="text-center text-primary">Location</h5>
+          <h5 class="text-center text-primary">
+            {{ t('layout.buttons.location') }}
+          </h5>
           <q-card style="height: 448.94px">
             <q-card-section style="height: 412.93px">
               <iframe
@@ -38,7 +18,55 @@
                 allowfullscreen="true"
               ></iframe>
             </q-card-section>
-            <p class="text-center text-primary">Address: New Cairo City, Cairo Governorate</p>
+            <p class="text-center text-primary">
+              {{
+                `${t('layout.buttons.address')}:
+                ${t('layout.buttons.locationAddress')}`
+              }}
+            </p>
+          </q-card>
+        </div>
+
+        <div class="full-width" style="max-width: 600px">
+          <h5 class="text-center text-primary">
+            {{ t('layout.buttons.contactUs') }}
+          </h5>
+          <q-card>
+            <q-card-section>
+              <q-form>
+                <q-input
+                  class="q-mb-md"
+                  filled
+                  v-model="name"
+                  :label="t('pages.contact.name')"
+                />
+                <q-input
+                  class="q-mb-md"
+                  filled
+                  v-model="email"
+                  :label="t('pages.contact.email')"
+                />
+                <q-input
+                  class="q-mb-md"
+                  filled
+                  v-model="phone"
+                  :label="t('pages.contact.phone')"
+                />
+                <q-input
+                  v-model="textareaModel"
+                  filled
+                  clearable
+                  type="textarea"
+                  :label="t('pages.contact.message')"
+                  :hint="t('pages.contact.hint')"
+                />
+              </q-form>
+            </q-card-section>
+            <q-btn
+              :label="t('layout.buttons.send')"
+              class="full-width"
+              color="primary"
+            ></q-btn>
           </q-card>
         </div>
       </div>
@@ -48,6 +76,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 const name = ref('');
 const email = ref('');

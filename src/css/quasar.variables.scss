@@ -12,14 +12,32 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #48BFE7;
-$secondary : #3A559A;
-$accent    : #9C27B0;
+$primary: #38b9db;
+$secondary: #3a559a;
+$accent: #9c27b0;
 
-$dark      : #1D1D1D;
-$dark-page : #121212;
+$dark: #1d1d1d;
+$dark-page: #121212;
 
-$positive  : #21BA45;
-$negative  : #C10015;
-$info      : #31CCEC;
-$warning   : #F2C037;
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+// $body-font-size: var(--q-theme-font-size, 20px);
+// $body-line-height: var(--q-theme-line-height, 1.2);
+// $typography-font-family: var(
+//   --q-theme-font-family,
+//   "'Roboto', '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+// );
+// $button-font-size: var(--q-theme-btn-font-size, 16px);
+
+@font-face {
+  font-family: arab;
+  src: url(./fonts/Cairo-Regular.woff);
+}
+
+// declare a class which applies it
+.my-font {
+  font-family: 'arab';
+}
