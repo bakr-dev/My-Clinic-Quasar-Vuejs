@@ -10,6 +10,12 @@ Clinic Web App
       >My Clinic Template</a
     >
   </h3>
+1- English:
+![2025-05-08_5-15-36](https://github.com/user-attachments/assets/18167739-a03e-4986-9103-6a758abfe042)
+
+2- Arabic:
+![2025-05-08_5-16-26](https://github.com/user-attachments/assets/8706e2ce-180d-447f-bfb5-20b6aa3e0923)
+
 
 
 ## Install the dependencies
